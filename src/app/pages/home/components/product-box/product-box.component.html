@@ -1,0 +1,25 @@
+<mat-card [ngClass]="{ 'text-center' : !fullWidthMode }">
+  <div [ngClass]="{flex: fullWidthMode}">
+    <img 
+      src="https://imgs.search.brave.com/tVEWWrmgAqV-WkZKQ1WZGdReclPSKxg00t-HIcR_LrA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/eHQyX2drdk10LTNa/VVZvOFJGOVNRSGFI/YSZwaWQ9QXBp"
+      [ngClass]="{'h-[200px]': !fullWidthMode , 'h-[360px]': fullWidthMode }">
+    <div 
+      class="w-full"
+      [ngClass]="{
+        'px-8 flex flex-col justify-between' :
+        fullWidthMode 
+      }">
+      <div>
+        <h5>Shoes</h5>
+        <p class="truncate hover:whitespace-normal">Stickers</p>
+        <p *ngIf="fullWidthMode">Descritption</p>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-red-400">{{ '150' | currency }}</span>
+        <button (click)="onAddToCart()">
+          <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>

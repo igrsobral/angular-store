@@ -14,7 +14,7 @@ export class FiltersComponent {
   constructor(){}
 
    ngOnInit(): void {
-
+    
    }
 
    onShowCategory(category: string): void{
